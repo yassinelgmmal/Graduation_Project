@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+transformers>=4.38.2
+torch>=2.1.2
+pillow
+accelerate
+bitsandbytes
+python-multipart  # Required for file uploads
+
+#run for start app "uvicorn main:app --reload"

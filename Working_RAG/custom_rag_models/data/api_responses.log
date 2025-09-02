@@ -1,0 +1,84 @@
+
+
+--- API Response Log: 2025-06-14 06:56:57 ---
+Response Type: <class 'dict'>
+Top-level keys:
+  - status (str): string (7 chars): success
+  - data (dict): dict with 3 keys
+
+Data structure:
+  - full_text (str): The journals that do not satisfy the criteria abov...
+  - tables (list): list with 1 items
+    Sample item keys: ['image']
+  - figures (list): list with 1 items
+    Sample item keys: ['image']
+
+
+--- API Response Log: 2025-06-14 12:24:48 ---
+Response Type: <class 'dict'>
+Top-level keys:
+  - status (str): string (7 chars): success
+  - data (dict): dict with 3 keys
+
+Data structure:
+  - full_text (str): The journals that do not satisfy the criteria abov...
+  - tables (list): list with 1 items
+    Sample item keys: ['image']
+  - figures (list): list with 1 items
+    Sample item keys: ['image']
+
+
+--- API Response Log: 2025-06-14 12:47:36 ---
+Response Type: <class 'dict'>
+Top-level keys:
+  - status (str): string (7 chars): success
+  - data (dict): dict with 3 keys
+
+Data structure:
+  - full_text (str): The journals that do not satisfy the criteria abov...
+  - tables (list): list with 1 items
+    Sample item keys: ['image']
+  - figures (list): list with 1 items
+    Sample item keys: ['image']
+
+
+--- API Response Log: 2025-06-14 16:41:10 ---
+Response Type: <class 'dict'>
+Top-level keys:
+  - status (str): string (7 chars): success
+  - data (dict): dict with 3 keys
+
+Data structure:
+  - full_text (str): The journals that do not satisfy the criteria abov...
+  - tables (list): list with 1 items
+    Sample item keys: ['image']
+  - figures (list): list with 1 items
+    Sample item keys: ['image']
+
+
+--- API Response Log: 2025-06-14 22:48:07 ---
+Response Type: <class 'dict'>
+Top-level keys:
+  - status (str): string (7 chars): success
+  - data (dict): dict with 3 keys
+
+Data structure:
+  - full_text (str): The journals that do not satisfy the criteria abov...
+  - tables (list): list with 1 items
+    Sample item keys: ['image']
+  - figures (list): list with 1 items
+    Sample item keys: ['image']
+
+
+--- API Response Log: 2025-06-14 23:10:06 ---
+Response Type: <class 'dict'>
+Top-level keys:
+  - status (str): string (7 chars): success
+  - data (dict): dict with 3 keys
+
+Data structure:
+  - full_text (str): The journals that do not satisfy the criteria abov...
+  - tables (list): list with 1 items
+    Sample item keys: ['image']
+  - figures (list): list with 1 items
+    Sample item keys: ['image']

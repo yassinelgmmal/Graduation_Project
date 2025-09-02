@@ -1,0 +1,31 @@
+# Core ML dependencies
+torch>=2.0.0,<2.2.0
+transformers>=4.35.0
+tokenizers>=0.15.0
+sentencepiece>=0.1.99
+safetensors>=0.4.0
+accelerate>=0.23.0
+numpy>=1.21.0,<2.0.0
+
+# FastAPI and web dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+
+# Additional ML utilities
+datasets>=2.14.0
+rouge-score>=0.1.2
+nltk>=3.8
+scipy>=1.9.0
+
+# System and utility dependencies
+requests>=2.28.0
+Pillow>=10.0.0
+tqdm>=4.64.0
+packaging>=21.0
+protobuf>=3.20.0
+psutil>=5.9.0  # For memory and system monitoring
+
+# Optional GPU acceleration (will be ignored if CUDA not available)
+--extra-index-url https://download.pytorch.org/whl/cu118
