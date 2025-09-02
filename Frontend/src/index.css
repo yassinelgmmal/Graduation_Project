@@ -1,0 +1,53 @@
+/* Global styles and font */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* CSS Variables for themes */
+:root {
+  --primary-color: #6f42c1;
+  --secondary-color: #9b7cb5;
+  --accent-color: #3a0941;
+  --bg-color: #fefefe;
+  --text-color: #333333;
+  --nav-bg: #ffffff;
+  --footer-bg: #f8f9fa;
+  --btn-bg: var(--primary-color);
+  --btn-hover-bg: #59309c;
+}
+
+/* Dark theme overrides */
+body.dark {
+  --primary-color: #9e70f4;
+  --bg-color: #212121;
+  --text-color: #eee;
+  --nav-bg: #1f1f1f;
+  --footer-bg: #1a1a1a;
+  --btn-bg: #8e6ad8;
+  --btn-hover-bg: #b99cff;
+}
+
+/* Utility classes */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+
+

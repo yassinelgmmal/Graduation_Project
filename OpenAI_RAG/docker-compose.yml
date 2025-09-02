@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  rag-app:
+    image: multimodal-rag:latest
+    container_name: multimodal-rag-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8010:8010"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./chroma_db:/app/chroma_db
+      - ./figures:/app/figures
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

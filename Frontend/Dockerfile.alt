@@ -1,0 +1,55 @@
+# Base image with Node.js
+FROM node:20-alpine AS build
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies needed for downloading assets
+RUN apk add --no-cache curl
+
+# Set environment variable to indicate Docker build
+ENV DOCKER_BUILD=true
+ENV NODE_ENV=production
+
+# Copy package.json and package-lock.json (without the postinstall script)
+COPY package.json ./
+
+# Temporarily modify package.json to remove the postinstall script
+RUN sed -i '/"postinstall": "node scripts\/download-assets.js"/d' package.json
+
+# Copy scripts
+COPY scripts/ ./scripts/
+
+# Install dependencies without running the postinstall script
+RUN npm install
+
+# Copy the rest of the application
+COPY . .
+
+# Run pre-download assets script
+RUN chmod +x ./scripts/pre-download-assets.sh && ./scripts/pre-download-assets.sh
+
+# Create the build
+RUN npm run build
+
+# Production environment
+FROM nginx:alpine
+
+# Copy the build output to replace the default nginx contents
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy entrypoint script
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+# Expose port 80
+EXPOSE 80
+
+# Entrypoint script for runtime configuration
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+# Command to run the server
+CMD ["nginx", "-g", "daemon off;"]

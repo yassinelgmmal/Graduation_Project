@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    # The following volumes are for development only
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    #   - ./build:/usr/share/nginx/html
+    environment:
+      - NODE_ENV=production
+      - BASE_URL=http://20.64.145.29:8010
+      - CUSTOM_MODELS_URL=http://localhost:8000
+      - DEBUG=false
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

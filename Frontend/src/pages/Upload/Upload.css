@@ -1,0 +1,32 @@
+.upload-section {
+  background: var(--bg-color);
+  color: var(--text-color);
+  user-select: none;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Improve contrast for form text in dark mode */
+.form-text {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .form-text {
+  color: #e0e0e0;
+  opacity: 0.9;
+}
+
+/* Ensure form labels are visible */
+.form-label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .form-label {
+  color: #ffffff;
+}

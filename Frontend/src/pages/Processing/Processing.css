@@ -1,0 +1,120 @@
+.processing-section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  user-select: none;
+}
+
+.model-info {
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.model-info .badge {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.model-info .small {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.processing-section .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-radius: 50%;
+  border-top: 0.25rem solid var(--primary-color, #ff69b4);
+  border-right: 0.25rem solid #eee;
+  border-bottom: 0.25rem solid #eee;
+  border-left: 0.25rem solid #eee;
+  animation: spinner-rotate 0.8s linear infinite !important;
+  display: inline-block;
+}
+
+.processing-section .spinner-border {
+  --bs-spinner-animation-speed: 0.8s !important;
+  --bs-spinner-animation-name: spinner-rotate !important;
+}
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.text-danger {
+  color: var(--error-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Dark theme specific styles */
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted-dark) !important;
+}
+
+/* Animation for status transitions */
+.processing-section > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Remove focus outline */
+.btn:focus,
+.btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}

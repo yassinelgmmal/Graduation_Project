@@ -1,0 +1,86 @@
+.typing-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  background-color: #777;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.sources-section {
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sources-list {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style-type: disc;
+  font-size: 0.85em;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.cursor-blink {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 300;
+  color: #333;
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.thinking-state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.thinking-state .typing-indicator {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,35 @@
+.about-section {
+  max-width: 800px;
+  margin: 3rem auto 6rem auto;
+  padding: 0 2rem;
+  color: var(--text-color);
+  animation: fadeIn 1s ease forwards;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--accent-color);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.3rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

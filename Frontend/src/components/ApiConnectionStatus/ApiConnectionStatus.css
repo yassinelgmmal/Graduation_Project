@@ -1,0 +1,211 @@
+.api-connection-status {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.api-connection-status.connected {
+  background-color: rgba(0, 128, 0, 0.1);
+  border: 1px solid rgba(0, 128, 0, 0.2);
+}
+
+.api-connection-status.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.api-connection-status.checking {
+  background-color: rgba(255, 165, 0, 0.1);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-dot.connected {
+  background-color: green;
+}
+
+.status-dot.error {
+  background-color: red;
+}
+
+.status-dot.checking {
+  background-color: orange;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.status-message {
+  flex-grow: 1;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 0 5px;
+}
+
+.refresh-btn:hover {
+  color: #000;
+}
+
+.refresh-btn:disabled {
+  color: #999;
+  cursor: not-allowed;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle-details-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0066cc;
+  margin-left: 8px;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.toggle-details-btn:hover {
+  text-decoration: underline;
+}
+
+.connection-details {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.connection-details h4 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.connection-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.connection-details li {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.connection-details li.success {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.connection-details li.error {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.connection-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.recommendation-box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(25, 118, 210, 0.1);
+  border: 1px solid rgba(25, 118, 210, 0.2);
+}
+
+.recommendation-box h5 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #1976d2;
+}
+
+.recommendation-box p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.network-warning {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: rgba(255, 165, 0, 0.1);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #d68000;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .connection-details {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .connection-details li {
+    border-bottom: 1px solid #333;
+  }
+
+  .refresh-btn {
+    color: #aaa;
+  }
+
+  .refresh-btn:hover {
+    color: #fff;
+  }
+}
+
+/* Support for the app's dark mode */
+:root[data-theme="dark"] .connection-details {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="dark"] .connection-details li {
+  border-bottom: 1px solid #333;
+}
+
+:root[data-theme="dark"] .refresh-btn {
+  color: #aaa;
+}
+
+:root[data-theme="dark"] .refresh-btn:hover {
+  color: #fff;
+}
